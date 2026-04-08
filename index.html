@@ -92,12 +92,13 @@
     /* ── HERO ── */
     .hero {
       position: relative;
-      height: 100vh;
-      min-height: 700px;
+      min-height: 100vh;
       overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 8rem 2rem 5rem;
+      box-sizing: border-box;
     }
     .hero video {
       position: absolute;
@@ -121,8 +122,8 @@
       position: relative;
       z-index: 2;
       text-align: center;
-      padding: 5rem 2rem 0;
       max-width: 900px;
+      width: 100%;
     }
     @media (max-width: 600px) {
       .hero { height: auto; min-height: unset; padding: 0; }
