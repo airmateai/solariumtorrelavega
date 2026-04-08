@@ -1,0 +1,1668 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solarium Torrelavega · El Mejor Bronceado de Cantabria</title>
+  <meta name="description" content="El mejor solarium de Torrelavega. Bronceado perfecto todo el año con cabinas de última generación. Resultados visibles desde la primera sesión. Reserva por WhatsApp." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue-light: #e8f4fd;
+      --blue-mid: #bdddf4;
+      --blue: #4fa8d8;
+      --blue-dark: #1a6fa3;
+      --blue-deep: #0d4f7c;
+      --yellow: #f5c518;
+      --yellow-light: #fde97a;
+      --gold: #d4a017;
+      --white: #ffffff;
+      --off-white: #f9fbfe;
+      --text-dark: #0d2535;
+      --text-mid: #2c5f82;
+      --text-light: #6b9ab8;
+      --green-wa: #25D366;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--text-dark);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 4rem;
+      background: transparent;
+      transition: background 0.4s, box-shadow 0.4s;
+    }
+    nav.scrolled {
+      background: rgba(255,255,255,0.97);
+      box-shadow: 0 2px 20px rgba(13,79,124,0.12);
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+    }
+    .nav-logo .sun-icon {
+      width: 36px; height: 36px;
+      background: radial-gradient(circle, #ffe066 30%, var(--yellow) 60%, var(--gold) 100%);
+      border-radius: 50%;
+      box-shadow: 0 0 18px 4px rgba(245,197,24,0.45);
+      position: relative;
+      flex-shrink: 0;
+    }
+    .nav-logo .sun-icon::before {
+      content: '';
+      position: absolute;
+      inset: -8px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245,197,24,0.25) 40%, transparent 70%);
+    }
+    .nav-logo span {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--white);
+      transition: color 0.4s;
+    }
+    nav.scrolled .nav-logo span { color: var(--blue-deep); }
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.9);
+      transition: color 0.3s;
+    }
+    nav.scrolled .nav-links a { color: var(--text-mid); }
+    .nav-links a:hover { color: var(--yellow); }
+    nav.scrolled .nav-links a:hover { color: var(--blue-dark); }
+    .nav-cta {
+      background: var(--yellow);
+      color: var(--text-dark) !important;
+      padding: 0.55rem 1.4rem;
+      border-radius: 50px;
+      font-weight: 700 !important;
+      transition: background 0.3s, transform 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--gold) !important; color: white !important; transform: translateY(-1px); }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 700px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero video {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        160deg,
+        rgba(13,47,78,0.72) 0%,
+        rgba(13,79,124,0.55) 50%,
+        rgba(245,197,24,0.12) 100%
+      );
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 0 2rem;
+      max-width: 900px;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(245,197,24,0.18);
+      border: 1px solid rgba(245,197,24,0.5);
+      color: var(--yellow-light);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 0.45rem 1.2rem;
+      border-radius: 50px;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--white);
+      margin-bottom: 0.4rem;
+      text-shadow: 0 4px 30px rgba(0,0,0,0.3);
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--yellow-light);
+    }
+    .hero-sub {
+      font-size: clamp(0.9rem, 2vw, 1.1rem);
+      font-weight: 300;
+      color: rgba(255,255,255,0.82);
+      margin: 1.2rem auto 2.5rem;
+      letter-spacing: 0.04em;
+      max-width: 580px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--yellow), var(--gold));
+      color: var(--text-dark);
+      text-decoration: none;
+      padding: 0.9rem 2.4rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      box-shadow: 0 6px 30px rgba(245,197,24,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: inline-block;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(245,197,24,0.5); }
+    .btn-outline {
+      background: transparent;
+      color: white;
+      text-decoration: none;
+      padding: 0.9rem 2.4rem;
+      border-radius: 50px;
+      border: 1.5px solid rgba(255,255,255,0.5);
+      font-weight: 500;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: background 0.3s, border-color 0.3s;
+      display: inline-block;
+    }
+    .btn-outline:hover { background: rgba(255,255,255,0.12); border-color: white; }
+
+    .btn-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--green-wa);
+      color: white;
+      text-decoration: none;
+      padding: 0.9rem 2.2rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      box-shadow: 0 6px 25px rgba(37,211,102,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-wa:hover { transform: translateY(-2px); box-shadow: 0 10px 35px rgba(37,211,102,0.5); }
+    .btn-wa svg { width: 20px; height: 20px; fill: white; flex-shrink: 0; }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    .scroll-line {
+      width: 1px;
+      height: 50px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.6), transparent);
+      animation: scrollDown 2s ease-in-out infinite;
+    }
+    @keyframes scrollDown {
+      0%, 100% { transform: scaleY(1); opacity: 1; }
+      50% { transform: scaleY(0.5); opacity: 0.4; }
+    }
+
+    /* ── SECTION BASE ── */
+    section { padding: 7rem 2rem; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 0.8rem;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--text-dark);
+      margin-bottom: 1.2rem;
+    }
+    .section-title em { font-style: italic; color: var(--blue-dark); }
+    .section-desc {
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: var(--text-light);
+      max-width: 600px;
+    }
+
+    /* ── STRIP / SOCIAL PROOF ── */
+    .strip {
+      background: linear-gradient(90deg, var(--blue-deep) 0%, var(--blue-dark) 50%, var(--blue-deep) 100%);
+      padding: 1.6rem 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      flex-wrap: wrap;
+    }
+    .strip-item {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      color: white;
+    }
+    .strip-icon { font-size: 1.4rem; }
+    .strip-text {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ── SOCIAL PROOF NUMBERS ── */
+    .proof {
+      background: var(--white);
+      padding: 5rem 2rem;
+      border-bottom: 1px solid var(--blue-light);
+    }
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+    .proof-item {}
+    .proof-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 5vw, 4rem);
+      font-weight: 700;
+      color: var(--blue-deep);
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+    .proof-num span { color: var(--gold); }
+    .proof-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+
+    /* ── ABOUT ── */
+    .about { background: var(--off-white); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .about-img-wrap { position: relative; }
+    .about-img-wrap img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+    }
+    .about-img-badge {
+      position: absolute;
+      bottom: -2rem;
+      right: -2rem;
+      width: 130px; height: 130px;
+      background: linear-gradient(135deg, var(--yellow), var(--gold));
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 30px rgba(212,160,23,0.4);
+    }
+    .about-img-badge strong { font-size: 2rem; font-weight: 700; color: white; line-height: 1; }
+    .about-img-badge span { font-size: 0.6rem; font-weight: 600; color: rgba(255,255,255,0.85); letter-spacing: 0.1em; text-transform: uppercase; text-align: center; padding: 0 0.5rem; }
+    .about-text .section-desc { margin-bottom: 2rem; }
+    .about-features { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; }
+    .about-features li {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      font-weight: 500;
+    }
+    .about-features li::before {
+      content: '';
+      width: 8px; height: 8px;
+      background: var(--yellow);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── SERVICES ── */
+    .services { background: var(--white); }
+    .services-header { text-align: center; margin-bottom: 4rem; }
+    .services-header .section-desc { margin: 0 auto; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .service-card {
+      background: var(--off-white);
+      border: 1px solid var(--blue-mid);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(79,168,216,0.15); }
+    .service-card img {
+      width: 100%; height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    .service-body {
+      padding: 1.8rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .service-icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
+    .service-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.6rem;
+    }
+    .service-desc {
+      font-size: 0.84rem;
+      line-height: 1.75;
+      color: var(--text-light);
+      flex: 1;
+      margin-bottom: 1.2rem;
+    }
+    .service-price {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--blue-deep);
+      margin-bottom: 1rem;
+    }
+    .service-price span {
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: var(--text-light);
+    }
+    .btn-service {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: transparent;
+      color: var(--green-wa);
+      border: 1.5px solid var(--green-wa);
+      text-decoration: none;
+      padding: 0.65rem 1.4rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.76rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: background 0.3s, color 0.3s;
+    }
+    .btn-service:hover { background: var(--green-wa); color: white; }
+    .btn-service svg { width: 16px; height: 16px; fill: currentColor; }
+
+    /* ── HOW IT WORKS ── */
+    .how {
+      background: linear-gradient(135deg, var(--blue-deep) 0%, var(--blue-dark) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .how::before {
+      content: '☀';
+      position: absolute;
+      right: -4rem; top: -4rem;
+      font-size: 22rem;
+      opacity: 0.04;
+      line-height: 1;
+    }
+    .how .section-label { color: var(--yellow-light); }
+    .how .section-title { color: white; }
+    .how .section-desc { color: rgba(255,255,255,0.65); }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+    .step {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+    }
+    .step-num {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--yellow), var(--gold));
+      color: var(--text-dark);
+      font-weight: 800;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.2rem;
+      box-shadow: 0 4px 18px rgba(245,197,24,0.35);
+    }
+    .step h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 0.6rem;
+    }
+    .step p {
+      font-size: 0.82rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.6);
+    }
+    .how-cta { text-align: center; margin-top: 3rem; }
+
+    /* ── BENEFITS / PROPUESTA DE VALOR ── */
+    .benefits { background: var(--blue-light); }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      margin-top: 3.5rem;
+    }
+    .benefit-card {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(79,168,216,0.08);
+      transition: box-shadow 0.3s;
+    }
+    .benefit-card:hover { box-shadow: 0 10px 40px rgba(79,168,216,0.15); }
+    .benefit-emoji { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+    .benefit-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--blue-deep);
+      margin-bottom: 0.6rem;
+    }
+    .benefit-card p {
+      font-size: 0.84rem;
+      line-height: 1.75;
+      color: var(--text-light);
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials { background: var(--off-white); }
+    .testimonials-header { text-align: center; margin-bottom: 4rem; }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .testi-card {
+      background: white;
+      border-radius: 8px;
+      padding: 2.2rem;
+      box-shadow: 0 4px 20px rgba(79,168,216,0.08);
+    }
+    .stars { color: var(--yellow); font-size: 1rem; letter-spacing: 0.1em; margin-bottom: 1rem; }
+    .testi-text {
+      font-size: 0.88rem;
+      line-height: 1.8;
+      color: var(--text-mid);
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .testi-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue-mid), var(--blue));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: white;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .testi-name { font-weight: 600; font-size: 0.85rem; color: var(--text-dark); }
+    .testi-city { font-size: 0.75rem; color: var(--text-light); }
+    .testi-footer { text-align: center; margin-top: 3rem; }
+
+    /* ── FAQ ── */
+    .faq { background: var(--white); }
+    .faq-header { text-align: center; margin-bottom: 3.5rem; }
+    .faq-list { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; }
+    .faq-item {
+      border: 1px solid var(--blue-mid);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .faq-question {
+      width: 100%;
+      background: var(--off-white);
+      border: none;
+      padding: 1.4rem 1.8rem;
+      text-align: left;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      transition: background 0.2s;
+    }
+    .faq-question:hover { background: var(--blue-light); }
+    .faq-question.open { background: var(--blue-deep); color: white; }
+    .faq-arrow {
+      font-size: 1rem;
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+    .faq-question.open .faq-arrow { transform: rotate(180deg); }
+    .faq-answer {
+      display: none;
+      padding: 1.4rem 1.8rem;
+      font-size: 0.88rem;
+      line-height: 1.8;
+      color: var(--text-mid);
+      border-top: 1px solid var(--blue-mid);
+    }
+    .faq-answer.open { display: block; }
+    .faq-cta { text-align: center; margin-top: 3rem; }
+
+    /* ── URGENCY / ESCASEZ ── */
+    .urgency {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      padding: 5rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .urgency::before {
+      content: '☀';
+      position: absolute;
+      left: -3rem; bottom: -3rem;
+      font-size: 16rem;
+      opacity: 0.05;
+      line-height: 1;
+    }
+    .urgency-badge {
+      display: inline-block;
+      background: rgba(245,197,24,0.15);
+      border: 1px solid rgba(245,197,24,0.4);
+      color: var(--yellow-light);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      margin-bottom: 1.5rem;
+    }
+    .urgency h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      color: white;
+      margin-bottom: 1rem;
+    }
+    .urgency h2 em { font-style: italic; color: var(--yellow-light); }
+    .urgency p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.65);
+      max-width: 540px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.8;
+    }
+    .urgency-offer {
+      display: inline-block;
+      background: rgba(245,197,24,0.12);
+      border: 1px solid rgba(245,197,24,0.3);
+      border-radius: 12px;
+      padding: 1.5rem 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .urgency-offer strong {
+      display: block;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      color: var(--yellow-light);
+      font-family: 'Cormorant Garamond', serif;
+      margin-bottom: 0.3rem;
+    }
+    .urgency-offer span {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* ── CTA BAND FINAL ── */
+    .cta-band {
+      background: linear-gradient(90deg, var(--yellow) 0%, #ffd84d 50%, var(--yellow) 100%);
+      padding: 6rem 2rem;
+      text-align: center;
+    }
+    .cta-band h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 400;
+      color: var(--text-dark);
+      margin-bottom: 0.8rem;
+    }
+    .cta-band p {
+      font-size: 1rem;
+      color: rgba(13,37,53,0.7);
+      margin-bottom: 2.5rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-band-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .cta-phone {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--blue-deep);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .cta-phone:hover { color: var(--blue-dark); text-decoration: underline; }
+    .btn-dark {
+      display: inline-block;
+      background: var(--blue-deep);
+      color: white;
+      text-decoration: none;
+      padding: 1rem 2.8rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      box-shadow: 0 6px 25px rgba(13,79,124,0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-dark:hover { transform: translateY(-2px); box-shadow: 0 10px 35px rgba(13,79,124,0.4); }
+
+    /* ── CONTACT ── */
+    .contact { background: var(--white); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .contact-info h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 400;
+      color: var(--text-dark);
+      margin-bottom: 1.2rem;
+    }
+    .contact-info p {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: var(--text-light);
+      margin-bottom: 2rem;
+    }
+    .contact-details { display: flex; flex-direction: column; gap: 1.2rem; }
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .contact-detail-icon {
+      width: 42px; height: 42px;
+      background: var(--blue-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .contact-detail-text strong {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-dark);
+      margin-bottom: 0.2rem;
+    }
+    .contact-detail-text span {
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+    .contact-detail-text a {
+      color: var(--blue-dark);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .contact-detail-text a:hover { text-decoration: underline; }
+    .contact-map {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(79,168,216,0.12);
+    }
+    .contact-map iframe {
+      width: 100%;
+      height: 420px;
+      border: none;
+      display: block;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--blue-deep);
+      padding: 3.5rem 2rem 2rem;
+      color: rgba(255,255,255,0.6);
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .footer-logo .sun-sm {
+      width: 28px; height: 28px;
+      background: radial-gradient(circle, var(--yellow-light), var(--yellow));
+      border-radius: 50%;
+      box-shadow: 0 0 12px rgba(245,197,24,0.5);
+    }
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .footer-links a {
+      text-decoration: none;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.55);
+      transition: color 0.3s;
+      letter-spacing: 0.06em;
+    }
+    .footer-links a:hover { color: var(--yellow); }
+    .footer-data {
+      max-width: 1200px;
+      margin: 2rem auto 1rem;
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+    }
+    .footer-data span { display: flex; align-items: center; gap: 0.5rem; }
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 1rem auto 0;
+      text-align: center;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 1rem;
+    }
+
+    /* ── FLOATING WA BUTTON ── */
+    .wa-float {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 200;
+      width: 60px; height: 60px;
+      background: var(--green-wa);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 25px rgba(37,211,102,0.5);
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      animation: waPulse 2.5s ease-in-out infinite;
+    }
+    .wa-float:hover { transform: scale(1.1); box-shadow: 0 10px 35px rgba(37,211,102,0.6); }
+    .wa-float svg { width: 32px; height: 32px; fill: white; }
+    @keyframes waPulse {
+      0%, 100% { box-shadow: 0 6px 25px rgba(37,211,102,0.5); }
+      50% { box-shadow: 0 6px 35px rgba(37,211,102,0.75); }
+    }
+
+    /* ── GALLERY ── */
+    .gallery { background: white; }
+    .gallery-header { text-align: center; margin-bottom: 3rem; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      gap: 1rem;
+    }
+    .gallery-grid .g-tall { grid-row: span 2; }
+    .gallery-grid img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+      transition: transform 0.4s, filter 0.4s;
+      filter: brightness(0.95) saturate(1.1);
+    }
+    .gallery-grid .g-tall img { height: 536px; }
+    .gallery-grid img:hover { transform: scale(1.02); filter: brightness(1) saturate(1.3); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-img-badge { right: 1rem; }
+      .services-grid, .benefits-grid, .testi-grid { grid-template-columns: 1fr 1fr; }
+      .steps { grid-template-columns: 1fr 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-grid .g-tall { grid-row: span 1; }
+      .gallery-grid .g-tall img { height: 260px; }
+      .proof-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 900px) {
+      [style*="grid-template-columns: repeat(4,1fr)"] { grid-template-columns: repeat(2,1fr) !important; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 4rem 1.2rem; }
+      .services-grid, .benefits-grid, .testi-grid, .steps { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .strip { gap: 1.5rem; }
+      .proof-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+      .footer-data { gap: 1rem; flex-direction: column; }
+      [style*="grid-template-columns: repeat(4,1fr)"] { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <a href="https://wa.me/34609381878?text=Hola,%20me%20gustaría%20reservar%20una%20sesión%20en%20Solarium%20Torrelavega" class="wa-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- NAV -->
+  <nav id="mainNav">
+    <a href="#" class="nav-logo">
+      <div class="sun-icon"></div>
+      <span>Solarium Torrelavega</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#como-funciona">Cómo funciona</a></li>
+      <li><a href="#opiniones">Opiniones</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="https://wa.me/34609381878?text=Hola,%20quiero%20reservar%20una%20sesión" target="_blank" class="nav-cta" rel="noopener">Reservar</a></li>
+    </ul>
+  </nav>
+
+  <!-- ① HERO -->
+  <section class="hero" id="inicio">
+    <video autoplay muted loop playsinline>
+      <source src="assets/People_entering_business_202604081344.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">☀ Nº1 en Bronceado · Torrelavega, Cantabria</div>
+      <h1>¿Cansado de esperar<br/>al verano para<br/><em>lucir tu mejor piel?</em></h1>
+      <p class="hero-sub">Bronceado dorado, uniforme y duradero todo el año. Cabinas de última generación, resultados visibles desde la primera sesión — en el corazón de Torrelavega.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/34609381878?text=Hola,%20quiero%20reservar%20una%20sesión%20en%20Solarium%20Torrelavega" class="btn-wa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Reservar sesión — WhatsApp
+        </a>
+        <a href="#servicios" class="btn-outline">Ver tarifas</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      Scroll
+    </div>
+  </section>
+
+  <!-- STRIP -->
+  <div class="strip">
+    <div class="strip-item"><span class="strip-icon">☀️</span><span class="strip-text">Cabinas Premium UV</span></div>
+    <div class="strip-item"><span class="strip-icon">✨</span><span class="strip-text">Colágeno & Fototerapia</span></div>
+    <div class="strip-item"><span class="strip-icon">⭐</span><span class="strip-text">+500 Clientes Satisfechos</span></div>
+    <div class="strip-item"><span class="strip-icon">📍</span><span class="strip-text">Torrelavega, Cantabria</span></div>
+  </div>
+
+  <!-- ② PRUEBA SOCIAL INMEDIATA -->
+  <section class="proof">
+    <div class="container">
+      <div class="proof-grid">
+        <div class="proof-item">
+          <div class="proof-num">+500<span></span></div>
+          <div class="proof-label">Clientes satisfechos</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-num">4.9<span>★</span></div>
+          <div class="proof-label">Valoración media en Google</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-num">6<span>+</span></div>
+          <div class="proof-label">Años en Torrelavega</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-num">1ª<span></span></div>
+          <div class="proof-label">Sesión con resultados visibles</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="nosotros">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrap">
+          <img
+            src="assets/FONDO_AZUL_CLARO_202604081339.png"
+            alt="Interior Solarium Torrelavega"
+            loading="lazy"
+          />
+          <div class="about-img-badge">
+            <strong>#1</strong>
+            <span>en Torrelavega</span>
+          </div>
+        </div>
+        <div class="about-text">
+          <p class="section-label">Quiénes Somos</p>
+          <h2 class="section-title">El arte del<br/><em>bronceado perfecto</em></h2>
+          <p class="section-desc">Somos el solarium de referencia en Torrelavega con más de 6 años de experiencia y cientos de clientes que repiten. Combinamos tecnología de vanguardia con un trato cercano y personalizado para que cada visita sea una experiencia única.</p>
+          <p class="section-desc" style="margin-top:1rem">Nuestras cabinas de última generación garantizan resultados naturales, uniformes y duraderos. Porque tu piel merece lo mejor — los 365 días del año.</p>
+          <ul class="about-features" style="margin-top:1.8rem">
+            <li>Cabinas de bronceado vertical y horizontal de alta presión</li>
+            <li>Lámparas UV de última generación certificadas</li>
+            <li>Tratamientos de colágeno y fototerapia LED</li>
+            <li>Asesoramiento personalizado en cada visita</li>
+            <li>Ambiente exclusivo, privado y cómodo</li>
+            <li>Productos cosméticos profesionales para el bronceado</li>
+          </ul>
+          <div style="margin-top: 2rem;">
+            <a href="https://wa.me/34609381878?text=Hola,%20quiero%20más%20información%20sobre%20Solarium%20Torrelavega" class="btn-wa" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Pregúntanos por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ③ SERVICIOS CON PRECIOS Y CTA -->
+  <section class="services" id="servicios">
+    <div class="container">
+      <div class="services-header">
+        <p class="section-label">Nuestros Servicios</p>
+        <h2 class="section-title">Todo lo que <em>necesitas</em></h2>
+        <p class="section-desc">Desde el bronceado clásico hasta los tratamientos más innovadores. Cada servicio está diseñado para maximizar tu bienestar y belleza — con precio claro desde el primer momento.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <img src="assets/FONDO_AZUL_CLARO_202604081339.png" alt="Cabina bronceado UV Premium Torrelavega" loading="lazy" />
+          <div class="service-body">
+            <div class="service-icon">☀️</div>
+            <div class="service-title">Bronceado UV Premium</div>
+            <p class="service-desc">Cabinas de rayos UVA de alta presión para un bronceado intenso, uniforme y duradero. Tecnología profesional para resultados excepcionales desde la primera sesión.</p>
+            <div class="service-price">Desde 5€ <span>/ sesión</span></div>
+            <a href="https://wa.me/34609381878?text=Hola,%20me%20interesa%20el%20Bronceado%20UV%20Premium" class="btn-service" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Reservar este servicio
+            </a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="assets/FONDO_AZUL_CALRO_202604081340.png" alt="Tratamiento colágeno anti-edad" loading="lazy" />
+          <div class="service-body">
+            <div class="service-icon">✨</div>
+            <div class="service-title">Colágeno & Anti-edad</div>
+            <p class="service-desc">Fototerapia con luz roja que estimula la producción de colágeno, reduce arrugas y mejora la elasticidad de la piel. El tratamiento favorito de nuestras clientas.</p>
+            <div class="service-price">Desde 8€ <span>/ sesión</span></div>
+            <a href="https://wa.me/34609381878?text=Hola,%20me%20interesa%20el%20tratamiento%20de%20Colágeno%20Anti-edad" class="btn-service" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Reservar este servicio
+            </a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="assets/FONDO_AZUL_CLARO_202604081344.png" alt="Bronceado Express cabina" loading="lazy" />
+          <div class="service-body">
+            <div class="service-icon">⚡</div>
+            <div class="service-title">Bronceado Express</div>
+            <p class="service-desc">Sesiones cortas de alta intensidad para quienes tienen poco tiempo. Resultados visibles en tan solo 10 minutos. Perfecto antes de una cita o evento especial.</p>
+            <div class="service-price">Desde 6€ <span>/ sesión</span></div>
+            <a href="https://wa.me/34609381878?text=Hola,%20me%20interesa%20el%20Bronceado%20Express" class="btn-service" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Reservar este servicio
+            </a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="assets/ABRE_LA_MAQUINA_202604081342.png" alt="Fototerapia LED cabina abierta" loading="lazy" />
+          <div class="service-body">
+            <div class="service-icon">💜</div>
+            <div class="service-title">Fototerapia LED</div>
+            <p class="service-desc">Terapia de luz LED multiespectro para tratar acné, mejorar el tono de piel y acelerar la regeneración celular. Resultados clínicamente probados y visibles.</p>
+            <div class="service-price">Desde 10€ <span>/ sesión</span></div>
+            <a href="https://wa.me/34609381878?text=Hola,%20me%20interesa%20la%20Fototerapia%20LED" class="btn-service" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Reservar este servicio
+            </a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="assets/FONDO_AZUL_CLARO_202604081339.png" alt="Cosméticos profesionales bronceado" loading="lazy" />
+          <div class="service-body">
+            <div class="service-icon">🧴</div>
+            <div class="service-title">Cosméticos Profesionales</div>
+            <p class="service-desc">Gama completa de aceleradores, hidratantes y fijadores del bronceado de las mejores marcas. Potencia y mantén tu color entre sesiones.</p>
+            <div class="service-price">Desde 12€ <span>/ unidad</span></div>
+            <a href="https://wa.me/34609381878?text=Hola,%20me%20interesa%20saber%20más%20sobre%20los%20cosméticos" class="btn-service" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Preguntar disponibilidad
+            </a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="assets/FONDO_AZUL_CALRO_202604081340.png" alt="Cosméticos bronceado profesionales" loading="lazy" />
+          <div class="service-body">
+            <div class="service-icon">🧴</div>
+            <div class="service-title">Cosméticos & Accesorios</div>
+            <p class="service-desc">Gana intensidad y duración con nuestros aceleradores, hidratantes post-sesión y fijadores de las mejores marcas del mercado.</p>
+            <div class="service-price">Desde 10€ <span>/ producto</span></div>
+            <a href="https://wa.me/34609381878?text=Hola,%20quiero%20info%20sobre%20los%20cosméticos" class="btn-service" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Preguntar disponibilidad
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BONOS SECTION DENTRO DE SERVICIOS -->
+      <div style="margin-top: 5rem;">
+        <div style="text-align:center; margin-bottom: 3rem;">
+          <p class="section-label">Ahorra más, broncéate mejor</p>
+          <h3 class="section-title">Nuestros <em>Bonos de Sesiones</em></h3>
+          <p class="section-desc" style="margin:0 auto;">Válidos durante 1 año completo desde la compra. Cuantas más sesiones, mayor es tu ahorro. Escríbenos para conocer los precios actuales.</p>
+        </div>
+        <div style="display:grid; grid-template-columns: repeat(4,1fr); gap:1.5rem;">
+
+          <div style="background:var(--off-white);border:2px solid var(--blue-mid);border-radius:12px;padding:2rem 1.5rem;text-align:center;transition:transform 0.3s,box-shadow 0.3s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(79,168,216,0.18)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+            <div style="font-size:2rem;margin-bottom:0.8rem;">☀️</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--blue-deep);margin-bottom:0.3rem;">Bono 10</div>
+            <div style="font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-light);margin-bottom:1.2rem;">10 Sesiones</div>
+            <div style="font-size:0.82rem;color:var(--text-mid);line-height:1.6;margin-bottom:1.5rem;">Perfecto para empezar y consolidar tu bronceado. Un año para usarlas a tu ritmo.</div>
+            <a href="https://wa.me/34609381878?text=Hola,%20me%20interesa%20el%20Bono%20de%2010%20sesiones" class="btn-service" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;gap:0.4rem;background:transparent;color:var(--green-wa);border:1.5px solid var(--green-wa);text-decoration:none;padding:0.65rem 1.2rem;border-radius:50px;font-weight:600;font-size:0.76rem;letter-spacing:0.08em;text-transform:uppercase;transition:background 0.3s,color 0.3s;">Quiero este bono</a>
+          </div>
+
+          <div style="background:var(--blue-deep);border:2px solid var(--blue-dark);border-radius:12px;padding:2rem 1.5rem;text-align:center;position:relative;transition:transform 0.3s,box-shadow 0.3s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(13,79,124,0.4)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+            <div style="position:absolute;top:-0.8rem;left:50%;transform:translateX(-50%);background:var(--yellow);color:var(--text-dark);font-size:0.62rem;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;padding:0.3rem 0.9rem;border-radius:50px;white-space:nowrap;">Más popular</div>
+            <div style="font-size:2rem;margin-bottom:0.8rem;">☀️☀️</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:white;margin-bottom:0.3rem;">Bono 20</div>
+            <div style="font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:1.2rem;">20 Sesiones</div>
+            <div style="font-size:0.82rem;color:rgba(255,255,255,0.7);line-height:1.6;margin-bottom:1.5rem;">Para quienes quieren mantener su bronceado todo el año sin preocupaciones. El preferido de nuestros clientes regulares.</div>
+            <a href="https://wa.me/34609381878?text=Hola,%20me%20interesa%20el%20Bono%20de%2020%20sesiones" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;gap:0.4rem;background:var(--yellow);color:var(--text-dark);text-decoration:none;padding:0.65rem 1.2rem;border-radius:50px;font-weight:700;font-size:0.76rem;letter-spacing:0.08em;text-transform:uppercase;">Quiero este bono</a>
+          </div>
+
+          <div style="background:var(--off-white);border:2px solid var(--blue-mid);border-radius:12px;padding:2rem 1.5rem;text-align:center;transition:transform 0.3s,box-shadow 0.3s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(79,168,216,0.18)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+            <div style="font-size:2rem;margin-bottom:0.8rem;">☀️☀️☀️</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--blue-deep);margin-bottom:0.3rem;">Bono 30</div>
+            <div style="font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-light);margin-bottom:1.2rem;">30 Sesiones</div>
+            <div style="font-size:0.82rem;color:var(--text-mid);line-height:1.6;margin-bottom:1.5rem;">El bono para los más comprometidos con su imagen. Ahorro significativo respecto al precio por sesión.</div>
+            <a href="https://wa.me/34609381878?text=Hola,%20me%20interesa%20el%20Bono%20de%2030%20sesiones" class="btn-service" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;gap:0.4rem;background:transparent;color:var(--green-wa);border:1.5px solid var(--green-wa);text-decoration:none;padding:0.65rem 1.2rem;border-radius:50px;font-weight:600;font-size:0.76rem;letter-spacing:0.08em;text-transform:uppercase;transition:background 0.3s,color 0.3s;">Quiero este bono</a>
+          </div>
+
+          <div style="background:linear-gradient(135deg,var(--gold),#b8860b);border:2px solid var(--gold);border-radius:12px;padding:2rem 1.5rem;text-align:center;position:relative;transition:transform 0.3s,box-shadow 0.3s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(212,160,23,0.4)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+            <div style="position:absolute;top:-0.8rem;left:50%;transform:translateX(-50%);background:var(--text-dark);color:var(--yellow-light);font-size:0.62rem;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;padding:0.3rem 0.9rem;border-radius:50px;white-space:nowrap;">Máximo ahorro</div>
+            <div style="font-size:2rem;margin-bottom:0.8rem;">👑</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:white;margin-bottom:0.3rem;">Bono 50</div>
+            <div style="font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:1.2rem;">50 Sesiones</div>
+            <div style="font-size:0.82rem;color:rgba(255,255,255,0.85);line-height:1.6;margin-bottom:1.5rem;">El bono definitivo. La mayor inversión, el mayor retorno. Para quienes no quieren preocuparse del bronceado en todo el año.</div>
+            <a href="https://wa.me/34609381878?text=Hola,%20me%20interesa%20el%20Bono%20de%2050%20sesiones" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;gap:0.4rem;background:white;color:var(--text-dark);text-decoration:none;padding:0.65rem 1.2rem;border-radius:50px;font-weight:700;font-size:0.76rem;letter-spacing:0.08em;text-transform:uppercase;">Quiero este bono</a>
+          </div>
+
+        </div>
+        <p style="text-align:center;margin-top:1.5rem;font-size:0.82rem;color:var(--text-light);">✅ Todos los bonos tienen validez de <strong>1 año</strong> desde la fecha de compra · Escríbenos por WhatsApp para conocer los precios actualizados</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ④ PROPUESTA DE VALOR -->
+  <section class="benefits" id="beneficios">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:1rem">
+        <p class="section-label">Por qué elegirnos</p>
+        <h2 class="section-title">6 razones por las que <em>somos diferentes</em></h2>
+        <p class="section-desc" style="margin:0 auto">No todos los solariums son iguales. Esto es lo que nos hace el favorito de Torrelavega y Cantabria.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <span class="benefit-emoji">🏆</span>
+          <h3>Cabinas de Última Generación</h3>
+          <p>Tecnología UV certificada con lámparas de alta presión que garantizan resultados uniformes y duraderos. Renovamos nuestro equipamiento regularmente.</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-emoji">🤝</span>
+          <h3>Asesoramiento Personalizado</h3>
+          <p>En cada visita analizamos tu tipo de piel y tus objetivos. No improvisamos: cada sesión está diseñada específicamente para ti.</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-emoji">🔒</span>
+          <h3>Total Privacidad</h3>
+          <p>Cabinas individuales, ambiente exclusivo y un espacio diseñado para que te sientas cómodo y tranquilo. Tu intimidad, nuestra prioridad.</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-emoji">📅</span>
+          <h3>Horario Amplio</h3>
+          <p>Abiertos de lunes a sábado. Lun–Vie de 9 a 21h y Sábado de 9 a 15h. Sin excusas para mantener tu bronceado perfecto todo el año.</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-emoji">💊</span>
+          <h3>Vitamina D & Bienestar</h3>
+          <p>La exposición controlada a UV estimula la síntesis de vitamina D y aumenta la serotonina. Broncéate y siéntete mejor por dentro y por fuera.</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-emoji">💎</span>
+          <h3>Precio Justo y Transparente</h3>
+          <p>Sin sorpresas ni letras pequeñas. Tarifas claras desde el primer momento y bonos de ahorro para quienes quieren resultados a largo plazo.</p>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:3rem">
+        <a href="https://wa.me/34609381878?text=Hola,%20quiero%20saber%20más%20sobre%20Solarium%20Torrelavega" class="btn-wa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Quiero saber más — WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤ CÓMO FUNCIONA -->
+  <section class="how" id="como-funciona">
+    <div class="container">
+      <p class="section-label">El Proceso</p>
+      <h2 class="section-title">Tu bronceado perfecto<br/><em>en 3 simples pasos</em></h2>
+      <p class="section-desc">Desde que llegas hasta que sales con tu bronceado dorado. Un proceso diseñado para tu comodidad y máximo resultado.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Reserva por WhatsApp</h3>
+          <p>Escríbenos y te confirmamos tu cita en menos de 10 minutos. Sin esperas, sin formularios. Tan fácil como enviar un mensaje.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Consulta & Tu Sesión</h3>
+          <p>Analizamos tu piel, elegimos la cabina y el tiempo ideal para ti, te preparamos con los cosméticos correctos y disfrutas de tu sesión en total privacidad.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Sal Radiante</h3>
+          <p>Hidratación post-sesión incluida para fijar el bronceado. Saldrás con un tono dorado visible, uniforme y que durará semanas.</p>
+        </div>
+      </div>
+      <div class="how-cta">
+        <a href="https://wa.me/34609381878?text=Hola,%20quiero%20reservar%20mi%20primera%20sesión" class="btn-wa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Empezar ahora — Es gratis reservar
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO ESTABLECIMIENTO -->
+  <section style="background: var(--blue-deep); padding: 0; position: relative; overflow: hidden; height: 480px; display: flex; align-items: center; justify-content: center;">
+    <video autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.7;">
+      <source src="assets/hero.mp4" type="video/mp4" />
+    </video>
+    <div style="position:relative;z-index:2;text-align:center;padding:2rem;">
+      <p style="font-size:0.7rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--yellow-light);margin-bottom:0.8rem;">Tu nuevo ritual de belleza</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;color:white;line-height:1.2;margin-bottom:1.5rem;">Entra. Broncéate.<br/><em style="font-style:italic;color:var(--yellow-light);">Sal radiante.</em></h2>
+      <a href="https://wa.me/34609381878?text=Hola,%20quiero%20reservar%20una%20sesión" class="btn-wa" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.6rem;background:var(--green-wa);color:white;text-decoration:none;padding:0.9rem 2.2rem;border-radius:50px;font-weight:700;font-size:0.82rem;letter-spacing:0.08em;text-transform:uppercase;box-shadow:0 6px 25px rgba(37,211,102,0.4);">
+        <svg style="width:20px;height:20px;fill:white;" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Reservar sesión ahora
+      </a>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="galeria">
+    <div class="container">
+      <div class="gallery-header">
+        <p class="section-label">Galería</p>
+        <h2 class="section-title">Nuestras <em>instalaciones</em></h2>
+      </div>
+      <!-- Fotos editadas -->
+      <p style="font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue);margin-bottom:1rem;">Nuestras máquinas</p>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:2.5rem;">
+        <img src="assets/ABRE_LA_MAQUINA_202604081342.png" alt="Cabina bronceadora abierta" loading="lazy" style="width:100%;height:260px;object-fit:cover;border-radius:4px;display:block;transition:transform 0.4s;filter:brightness(0.97) saturate(1.1);" onmouseenter="this.style.transform='scale(1.02)'" onmouseleave="this.style.transform=''" />
+        <img src="assets/FONDO_AZUL_CLARO_202604081339.png" alt="Interior Solarium Torrelavega" loading="lazy" style="width:100%;height:260px;object-fit:cover;border-radius:4px;display:block;transition:transform 0.4s;filter:brightness(0.97) saturate(1.1);" onmouseenter="this.style.transform='scale(1.02)'" onmouseleave="this.style.transform=''" />
+        <img src="assets/FONDO_AZUL_CALRO_202604081340.png" alt="Cabina UV Torrelavega" loading="lazy" style="width:100%;height:260px;object-fit:cover;border-radius:4px;display:block;transition:transform 0.4s;filter:brightness(0.97) saturate(1.1);" onmouseenter="this.style.transform='scale(1.02)'" onmouseleave="this.style.transform=''" />
+        <img src="assets/FONDO_AZUL_CLARO_202604081344.png" alt="Instalaciones solarium" loading="lazy" style="width:100%;height:260px;object-fit:cover;border-radius:4px;display:block;transition:transform 0.4s;filter:brightness(0.97) saturate(1.1);" onmouseenter="this.style.transform='scale(1.02)'" onmouseleave="this.style.transform=''" />
+      </div>
+      <!-- Fotos reales del establecimiento -->
+      <p style="font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue);margin-bottom:1rem;">El ambiente</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
+        <img src="assets/WhatsApp%20Image%202026-04-07%20at%2019.59.55.jpeg" alt="Solarium Torrelavega" loading="lazy" style="width:100%;height:240px;object-fit:cover;border-radius:4px;display:block;transition:transform 0.4s;filter:brightness(0.97);" onmouseenter="this.style.transform='scale(1.02)'" onmouseleave="this.style.transform=''" />
+        <img src="assets/WhatsApp%20Image%202026-04-07%20at%2019.59.55%20(1).jpeg" alt="Solarium Torrelavega" loading="lazy" style="width:100%;height:240px;object-fit:cover;border-radius:4px;display:block;transition:transform 0.4s;filter:brightness(0.97);" onmouseenter="this.style.transform='scale(1.02)'" onmouseleave="this.style.transform=''" />
+        <img src="assets/WhatsApp%20Image%202026-04-07%20at%2019.59.56.jpeg" alt="Cabinas Solarium Torrelavega" loading="lazy" style="width:100%;height:240px;object-fit:cover;border-radius:4px;display:block;transition:transform 0.4s;filter:brightness(0.97);" onmouseenter="this.style.transform='scale(1.02)'" onmouseleave="this.style.transform=''" />
+        <img src="assets/WhatsApp%20Image%202026-04-07%20at%2019.59.56%20(1).jpeg" alt="Máquinas bronceado" loading="lazy" style="width:100%;height:240px;object-fit:cover;border-radius:4px;display:block;transition:transform 0.4s;filter:brightness(0.97);" onmouseenter="this.style.transform='scale(1.02)'" onmouseleave="this.style.transform=''" />
+        <img src="assets/WhatsApp%20Image%202026-04-07%20at%2019.59.57.jpeg" alt="Solarium interior" loading="lazy" style="width:100%;height:240px;object-fit:cover;border-radius:4px;display:block;transition:transform 0.4s;filter:brightness(0.97);" onmouseenter="this.style.transform='scale(1.02)'" onmouseleave="this.style.transform=''" />
+        <img src="assets/WhatsApp%20Image%202026-04-07%20at%2019.59.58.jpeg" alt="Solarium Torrelavega instalaciones" loading="lazy" style="width:100%;height:240px;object-fit:cover;border-radius:4px;display:block;transition:transform 0.4s;filter:brightness(0.97);" onmouseenter="this.style.transform='scale(1.02)'" onmouseleave="this.style.transform=''" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ TESTIMONIOS -->
+  <section class="testimonials" id="opiniones">
+    <div class="container">
+      <div class="testimonials-header">
+        <p class="section-label">Opiniones Reales</p>
+        <h2 class="section-title">Lo que dicen<br/><em>nuestros clientes</em></h2>
+        <p class="section-desc" style="margin: 0 auto; margin-top: 0.5rem;">+500 personas ya han confiado en nosotros. Esto es lo que cuentan.</p>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p class="testi-text">"El mejor solarium de la zona, sin duda. Las cabinas son de última generación y el resultado es increíble. Llevo 2 años viniendo y no cambiaría por nada. El trato es exquisito y siempre me aconsejan bien según mi tipo de piel."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">LM</div>
+            <div>
+              <div class="testi-name">Laura M.</div>
+              <div class="testi-city">Torrelavega · Cliente habitual</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p class="testi-text">"Fui por primera vez antes de mis vacaciones en la playa y quedé enamorada. El bronceado me duró semanas y lo mejor es que no me puse roja en ningún momento porque me prepararon la piel poco a poco. Totalmente recomendable."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">CR</div>
+            <div>
+              <div class="testi-name">Carmen R.</div>
+              <div class="testi-city">Santander · Cliente desde 2023</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p class="testi-text">"Me recomendaron el tratamiento de colágeno y ha sido un antes y un después para mi piel. Se nota más firme y luminosa con solo unas semanas. Lo combino con el bronceado y los resultados son espectaculares."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">AP</div>
+            <div>
+              <div class="testi-name">Ana P.</div>
+              <div class="testi-city">Torrelavega · Clienta VIP</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p class="testi-text">"Llevo años viniendo y nunca me han defraudado. Siempre atentas, siempre con las cabinas perfectas. He probado otros solariums y no hay comparación. Aquí la diferencia se nota desde la primera sesión."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">MG</div>
+            <div>
+              <div class="testi-name">María G.</div>
+              <div class="testi-city">Torrelavega · 4 años como cliente</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p class="testi-text">"Me hice un bono de 10 sesiones y fue la mejor inversión del año. Ahorro dinero y tengo el color perfecto todo el año. La sesión express de 10 minutos antes de eventos es un truco que ya no abandono."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">JF</div>
+            <div>
+              <div class="testi-name">Javier F.</div>
+              <div class="testi-city">Torrelavega · Bono mensual</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p class="testi-text">"Tenía muchas dudas sobre si el solarium era para mí. Me explicaron todo con mucha paciencia, empezamos con sesiones cortas y progresivamente. Ahora tengo un bronceado precioso sin ningún problema. Gracias por el trato tan humano."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">RS</div>
+            <div>
+              <div class="testi-name">Rosa S.</div>
+              <div class="testi-city">Reocín · Primera vez en solarium</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-footer">
+        <a href="https://wa.me/34609381878?text=Hola,%20quiero%20reservar%20mi%20sesión%20en%20Solarium%20Torrelavega" class="btn-wa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Únete a nuestros +500 clientes satisfechos
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑦ FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="faq-header">
+        <p class="section-label">Preguntas Frecuentes</p>
+        <h2 class="section-title">Todo lo que necesitas <em>saber antes de venir</em></h2>
+        <p class="section-desc" style="margin: 0 auto">Resolvemos las dudas más comunes para que llegues sin incertidumbre y te vayas con el bronceado perfecto.</p>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            ¿Es seguro el bronceado en solarium? ¿Puede dañar mi piel?
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            Sí, es seguro cuando se hace de forma profesional y controlada. A diferencia del sol natural, nuestras cabinas regulan con precisión la dosis de UV, eliminando la exposición a rayos UVB que son los que queman. Además, siempre realizamos una valoración de tu tipo de piel antes de cada sesión para adaptar el tiempo y la intensidad. Llevamos más de 6 años ayudando a cientos de clientes sin ningún incidente.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            ¿Cuántas sesiones necesito para ver resultado?
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            La mayoría de nuestros clientes notan un cambio visible ya desde la primera sesión. Para un bronceado consolidado y duradero recomendamos entre 3 y 5 sesiones en las dos primeras semanas, y luego sesiones de mantenimiento cada 7-10 días. Con nuestros bonos, esto te sale muy económico y el resultado se mantiene durante meses.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            ¿Tengo que llevar algo especial o preparar mi piel antes?
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            No necesitas traer nada especial. Nosotros te proporcionamos todo lo necesario. Eso sí, te recomendamos ducharte antes de la sesión sin aplicar cremas ni perfumes, y si puedes, exfoliar la piel el día anterior para que el bronceado sea más uniforme. Disponemos de los mejores cosméticos aceleradores e hidratantes para que el resultado sea óptimo desde el primer día.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            ¿Puedo venir si tengo la piel muy clara o sensible?
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            ¡Absolutamente! De hecho, las pieles claras son las que más se benefician de un proceso gradual y controlado. Empezamos con sesiones muy cortas (5-7 minutos) y vamos aumentando progresivamente según tu respuesta. Muchos de nuestros clientes más fieles tienen piel clara y hoy lucen un bronceado precioso sin nunca haberse quemado. Solo te pedimos que nos cuentes tu historial con el sol para adaptarnos a ti.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            ¿Qué diferencia hay entre un bono y pagar sesión a sesión?
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            Pagar sesión a sesión es perfecto si quieres probar sin compromiso. Pero si ya sabes que quieres mantener tu bronceado, un bono es mucho más económico: con el bono de 10 sesiones ahorras hasta un 20% frente al precio unitario, y las sesiones no caducan en menos de 6 meses. Escríbenos por WhatsApp y te explicamos todos los packs disponibles sin ningún compromiso.
+          </div>
+        </div>
+
+      </div>
+      <div class="faq-cta">
+        <p style="color: var(--text-light); font-size: 0.88rem; margin-bottom: 1.2rem;">¿Tienes otra pregunta? Te respondemos en menos de 10 minutos.</p>
+        <a href="https://wa.me/34609381878?text=Hola,%20tengo%20una%20pregunta%20sobre%20Solarium%20Torrelavega" class="btn-wa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Pregunta por WhatsApp — Respuesta inmediata
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑧ URGENCIA / ESCASEZ -->
+  <section class="urgency">
+    <div class="container">
+      <div class="urgency-badge">⏰ Oferta por tiempo limitado</div>
+      <h2>Primera sesión a <em>precio especial</em><br/>para nuevos clientes</h2>
+      <p>¿Aún no has venido? Esta primavera tenemos plazas limitadas para nuevos clientes con una oferta especial de bienvenida. Broncéate antes de que llegue el verano — y llega a la playa ya con color.</p>
+      <div class="urgency-offer">
+        <strong>Primera sesión + Asesoramiento gratuito</strong>
+        <span>Plazas limitadas · Solo para nuevos clientes · Reserva hoy</span>
+      </div>
+      <br/>
+      <a href="https://wa.me/34609381878?text=Hola,%20me%20gustaría%20aprovechar%20la%20oferta%20de%20primera%20sesión%20para%20nuevos%20clientes" class="btn-wa" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Quiero aprovechar la oferta — WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- ⑨ CTA FINAL -->
+  <div class="cta-band" id="reservar">
+    <div class="container">
+      <h2>¿Listo para tu bronceado perfecto?<br/>Estamos a un mensaje de distancia.</h2>
+      <p>Reserva ahora, sin formularios, sin esperas. Escríbenos y confirmamos tu cita en menos de 10 minutos.</p>
+      <div class="cta-band-actions">
+        <a href="https://wa.me/34609381878?text=Hola,%20quiero%20reservar%20mi%20sesión%20en%20Solarium%20Torrelavega" class="btn-wa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Reservar por WhatsApp
+        </a>
+        <a href="tel:+34609381878" class="cta-phone">📞 609 38 18 78</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ⑩ CONTACTO / PIE -->
+  <section class="contact" id="contacto">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="section-label">Contacto & Ubicación</p>
+          <h2>Visítanos en<br/>Torrelavega</h2>
+          <p>Estamos en el corazón de Torrelavega. Llámanos, escríbenos por WhatsApp o pásate directamente — siempre hay alguien dispuesto a atenderte.</p>
+          <div class="contact-details">
+            <div class="contact-detail">
+              <div class="contact-detail-icon">📍</div>
+              <div class="contact-detail-text">
+                <strong>Dirección</strong>
+                <span>[Dirección completa] · Torrelavega, Cantabria</span>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">📞</div>
+              <div class="contact-detail-text">
+                <strong>Teléfono</strong>
+                <a href="tel:+34609381878">609 38 18 78</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">💬</div>
+              <div class="contact-detail-text">
+                <strong>WhatsApp</strong>
+                <a href="https://wa.me/34609381878?text=Hola,%20quiero%20reservar%20en%20Solarium%20Torrelavega" target="_blank" rel="noopener">Escríbenos y te contestamos en minutos</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">🕐</div>
+              <div class="contact-detail-text">
+                <strong>Horario</strong>
+                <span>Lunes – Viernes: 9:00 – 21:00<br/>Sábado: 9:00 – 15:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11640.424040668617!2d-4.065!3d43.352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd496839c1aa6fc5%3A0x8d5e36dd7a84fe66!2sTorrelavega%2C%20Cantabria!5e0!3m2!1ses!2ses!4v1712300000000!5m2!1ses!2ses"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación Solarium Torrelavega"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <div class="sun-sm"></div>
+        Solarium Torrelavega
+      </div>
+      <ul class="footer-links">
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#beneficios">Por qué elegirnos</a></li>
+        <li><a href="#opiniones">Opiniones</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-data">
+      <span>📍 [Dirección] · Torrelavega, Cantabria</span>
+      <span>📞 609 38 18 78</span>
+      <span>🕐 Lun–Vie 9–21h · Sáb 9–15h</span>
+      <span>⭐ 4.9/5 en Google</span>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Solarium Torrelavega · El mejor bronceado de Cantabria · Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script>
+    // Nav scroll effect
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Fade in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.service-card, .benefit-card, .step, .testi-card, .proof-item, .faq-item').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(28px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+
+    // FAQ accordion
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const isOpen = btn.classList.contains('open');
+
+      // Close all
+      document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('open'));
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+
+      // Open clicked if it was closed
+      if (!isOpen) {
+        btn.classList.add('open');
+        answer.classList.add('open');
+      }
+    }
+  </script>
+</body>
+</html>
