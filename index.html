@@ -125,7 +125,9 @@
       max-width: 900px;
     }
     @media (max-width: 600px) {
-      .hero-content { padding-top: 4rem; }
+      .hero-content { padding-top: 5.5rem; }
+      nav { padding: 0.3rem 1rem; }
+      .nav-logo img { width: 100px; }
     }
     .hero-badge {
       display: inline-block;
@@ -1521,6 +1523,15 @@
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 60);
     });
+
+    // Ajustar padding del hero según altura real del nav
+    function ajustarHero() {
+      const navH = nav.offsetHeight;
+      const heroContent = document.querySelector('.hero-content');
+      if (heroContent) heroContent.style.paddingTop = (navH + 24) + 'px';
+    }
+    ajustarHero();
+    window.addEventListener('resize', ajustarHero);
 
     // Fade in on scroll
     const observer = new IntersectionObserver((entries) => {
