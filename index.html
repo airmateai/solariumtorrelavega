@@ -948,6 +948,52 @@
       .footer-data { gap: 1rem; flex-direction: column; }
       [style*="grid-template-columns: repeat(4,1fr)"] { grid-template-columns: 1fr !important; }
     }
+  
+    .hero-oferta { display: inline-flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; justify-content: center; background: linear-gradient(135deg, var(--yellow), var(--gold)); color: var(--text-dark); text-decoration: none; font-weight: 600; font-size: 0.88rem; padding: 0.6rem 1.2rem; border-radius: 50px; margin-bottom: 1.1rem; box-shadow: 0 6px 30px rgba(245,197,24,0.45); animation: heroOfertaPulse 2.4s ease-in-out infinite; }
+    .hero-oferta b { font-size: 1.05rem; }
+    .hero-oferta span { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; background: var(--blue-deep); color: var(--white); padding: 0.25rem 0.7rem; border-radius: 50px; }
+    @keyframes heroOfertaPulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.04); } }
+    @media (prefers-reduced-motion: reduce) { .hero-oferta { animation: none; } }
+    /* ── OFERTA 3x2 ── */
+    .oferta { position: relative; overflow: hidden; padding: 4.5rem 1.5rem; background: radial-gradient(ellipse at 50% 0%, var(--blue-dark) 0%, var(--blue-deep) 55%, #082f4c 100%); }
+    .oferta-rays { position: absolute; inset: -50%; background: repeating-conic-gradient(from 0deg at 50% 50%, rgba(245,197,24,0.10) 0deg 10deg, transparent 10deg 20deg); animation: ofertaSpin 60s linear infinite; pointer-events: none; }
+    @keyframes ofertaSpin { to { transform: rotate(360deg); } }
+    .oferta-card { position: relative; max-width: 860px; margin: 0 auto; background: var(--white); border-radius: 22px; overflow: hidden; border: 6px solid var(--yellow); box-shadow: 0 0 0 6px var(--blue), 0 30px 80px rgba(0,0,0,0.45); text-align: center; }
+    .oferta-ribbon { background: repeating-linear-gradient(115deg, var(--yellow) 0 40px, var(--blue) 40px 80px); padding: 0.55rem 0; overflow: hidden; white-space: nowrap; }
+    .oferta-ribbon-track { display: inline-flex; animation: ofertaMarquee 22s linear infinite; }
+    .oferta-ribbon span { font-family: 'Montserrat', sans-serif; font-style: italic; font-weight: 700; font-size: 0.95rem; letter-spacing: 0.04em; color: var(--white); text-shadow: 0 1px 0 var(--blue-deep), 1px 0 0 var(--blue-deep), 0 -1px 0 var(--blue-deep), -1px 0 0 var(--blue-deep); padding-right: 0.5rem; }
+    @keyframes ofertaMarquee { to { transform: translateX(-50%); } }
+    .oferta-body { padding: 2.2rem 2rem 2.6rem; }
+    .oferta-kicker { display: inline-block; background: var(--blue-light); color: var(--blue-deep); font-weight: 700; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.5rem 1.1rem; border-radius: 50px; margin-bottom: 0.6rem; }
+    .oferta-big { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: clamp(5.5rem, 18vw, 9.5rem); line-height: 1; letter-spacing: -0.02em; background: radial-gradient(circle at 50% 55%, var(--yellow) 0%, var(--gold) 22%, var(--blue) 58%, var(--blue-deep) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(4px 5px 0 rgba(13,79,124,0.25)); }
+    .oferta-big span { font-size: 0.6em; vertical-align: 0.18em; margin: 0 0.12em; }
+    .oferta-title { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: clamp(1.6rem, 4.5vw, 2.4rem); line-height: 1.15; color: var(--blue-deep); margin: 0.4rem 0 1.8rem; }
+    .oferta-title em { color: var(--gold); }
+    .oferta-steps { display: flex; align-items: stretch; justify-content: center; gap: 0.7rem; flex-wrap: wrap; margin-bottom: 1.4rem; }
+    .oferta-step { background: var(--off-white); border: 2px solid var(--blue-mid); border-radius: 14px; padding: 0.9rem 1.2rem; min-width: 170px; display: flex; flex-direction: column; justify-content: center; }
+    .oferta-step strong { font-size: 1.05rem; color: var(--blue-deep); }
+    .oferta-step span { font-size: 0.8rem; color: var(--text-mid); margin-top: 0.15rem; }
+    .oferta-step-gift { background: linear-gradient(135deg, var(--yellow-light), var(--yellow)); border-color: var(--gold); }
+    .oferta-step-gift strong, .oferta-step-gift span { color: var(--text-dark); }
+    .oferta-step-total { background: var(--blue-deep); border-color: var(--blue-deep); }
+    .oferta-step-total strong { color: var(--yellow); }
+    .oferta-step-total span { color: var(--white); }
+    .oferta-plus { align-self: center; font-size: 1.8rem; font-weight: 700; color: var(--blue); }
+    .oferta-price { font-size: 1.15rem; color: var(--text-mid); margin-bottom: 0.4rem; }
+    .oferta-price s { color: var(--text-light); }
+    .oferta-price b { color: var(--blue-deep); font-size: 1.25em; }
+    .oferta-note { font-size: 0.88rem; color: var(--text-mid); margin-bottom: 1.6rem; }
+    .oferta-note span { font-weight: 700; color: var(--gold); }
+    .oferta-btn { font-size: 0.9rem; }
+    @media (max-width: 600px) {
+      .oferta { padding: 3rem 1rem; }
+      .oferta-body { padding: 1.6rem 1.1rem 2rem; }
+      .oferta-kicker { font-size: 0.68rem; }
+      .oferta-steps { flex-direction: column; align-items: center; gap: 0.4rem; }
+      .oferta-step { width: 100%; max-width: 300px; }
+      .oferta-plus { font-size: 1.4rem; }
+    }
+    @media (prefers-reduced-motion: reduce) { .oferta-rays, .oferta-ribbon-track { animation: none; } }
   </style>
 </head>
 <body>
@@ -976,6 +1022,7 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div style="margin-bottom:1.8rem;"><img src="assets/logotorre.png" alt="Solarium Torrelavega" style="width:min(480px,80vw);height:auto;filter:drop-shadow(0 4px 24px rgba(0,0,0,0.6));" /></div>
+      <a href="#oferta" class="hero-oferta" id="heroOferta">🎁 Octubre: <b>3x2</b> en bonos de 10 sesiones <span>Ver oferta →</span></a>
       <div class="hero-badge">☀ Nº1 en Bronceado · Torrelavega, Cantabria</div>
       <h1>¿Cansado de esperar<br/>al verano para<br/><em>lucir tu mejor piel?</em></h1>
       <p class="hero-sub">Bronceado dorado y uniforme. Cabinas de última generación, resultados visibles desde la primera sesión — en el corazón de Torrelavega.</p>
@@ -986,6 +1033,31 @@
     </div>
     <div class="hero-scroll">
       <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- OFERTA OCTUBRE 3x2 (se oculta sola a partir del 1 de noviembre) -->
+  <section class="oferta" id="oferta" aria-label="Oferta 3x2 en bonos de 10 sesiones">
+    <div class="oferta-rays" aria-hidden="true"></div>
+    <div class="oferta-card">
+      <div class="oferta-ribbon" aria-hidden="true"><div class="oferta-ribbon-track">
+        <span>Oferta especial · Oferta especial · Oferta especial · Oferta especial · Oferta especial · Oferta especial · </span><span>Oferta especial · Oferta especial · Oferta especial · Oferta especial · Oferta especial · Oferta especial · </span>
+      </div></div>
+      <div class="oferta-body">
+        <p class="oferta-kicker">⭐ ¡Vuelve nuestra oferta estrella! · Del 1 al 31 de octubre</p>
+        <div class="oferta-big">3<span>×</span>2</div>
+        <h2 class="oferta-title">Nunca ha sido tan fácil<br/><em>mantener tu bronceado</em></h2>
+        <div class="oferta-steps">
+          <div class="oferta-step"><strong>Compras 2</strong><span>bonos de 10 sesiones</span></div>
+          <div class="oferta-plus" aria-hidden="true">+</div>
+          <div class="oferta-step oferta-step-gift"><strong>🎁 Te regalamos 1</strong><span>bono de 10 sesiones</span></div>
+          <div class="oferta-plus" aria-hidden="true">=</div>
+          <div class="oferta-step oferta-step-total"><strong>30 sesiones</strong><span>por solo 108 €</span></div>
+        </div>
+        <p class="oferta-price"><s>162 €</s> <b>108 €</b> · la sesión te sale a <b>3,60 €</b></p>
+        <p class="oferta-note">⏳ Tienes 1 año para consumirlas · <span id="ofertaDias">¡No dejes pasar esta oportunidad!</span></p>
+        <a href="#contacto" class="btn-primary oferta-btn">☀ Ven a por tu oferta</a>
+      </div>
     </div>
   </section>
 
@@ -1581,5 +1653,17 @@
   };
   </script>
   <script src="https://t6227351-debug.github.io/bot-airmate-1-/airmate-widget.js" async></script>
+  <script>
+    // Oferta 3x2: visible del 1 al 31 de octubre de 2026; desaparece sola después.
+    (function(){
+      var el = document.getElementById('oferta'); if (!el) return;
+      var fin = new Date(2026, 10, 1, 0, 0, 0); // 1 de noviembre, 00:00
+      var hoy = new Date();
+      if (hoy >= fin) { el.remove(); var h = document.getElementById('heroOferta'); if (h) h.remove(); return; }
+      var dias = Math.ceil((fin - hoy) / 86400000);
+      var txt = document.getElementById('ofertaDias');
+      if (txt) txt.textContent = dias <= 1 ? '¡Último día!' : '¡Solo quedan ' + dias + ' días!';
+    })();
+  </script>
 </body>
 </html>
