@@ -1022,7 +1022,7 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div style="margin-bottom:1.8rem;"><img src="assets/logotorre.png" alt="Solarium Torrelavega" style="width:min(480px,80vw);height:auto;filter:drop-shadow(0 4px 24px rgba(0,0,0,0.6));" /></div>
-      <a href="#oferta" class="hero-oferta" id="heroOferta">🎁 Octubre: <b>3x2</b> en bonos de 10 sesiones <span>Ver oferta →</span></a>
+      <a href="#oferta" class="hero-oferta" id="heroOferta">🎁 Comprando 2 bonos, <b>el 2º al 50%</b> <span>Ver oferta →</span></a>
       <div class="hero-badge">☀ Nº1 en Bronceado · Torrelavega, Cantabria</div>
       <h1>¿Cansado de esperar<br/>al verano para<br/><em>lucir tu mejor piel?</em></h1>
       <p class="hero-sub">Bronceado dorado y uniforme. Cabinas de última generación, resultados visibles desde la primera sesión — en el corazón de Torrelavega.</p>
@@ -1036,26 +1036,24 @@
     </div>
   </section>
 
-  <!-- OFERTA OCTUBRE 3x2 (se oculta sola a partir del 1 de noviembre) -->
-  <section class="oferta" id="oferta" aria-label="Oferta 3x2 en bonos de 10 sesiones">
+  <!-- OFERTA: 2 bonos, el 2º al 50% (bonos de 10 y 20 sesiones) -->
+  <section class="oferta" id="oferta" aria-label="Oferta: comprando 2 bonos, el segundo al 50%">
     <div class="oferta-rays" aria-hidden="true"></div>
     <div class="oferta-card">
       <div class="oferta-ribbon" aria-hidden="true"><div class="oferta-ribbon-track">
         <span>Oferta especial · Oferta especial · Oferta especial · Oferta especial · Oferta especial · Oferta especial · </span><span>Oferta especial · Oferta especial · Oferta especial · Oferta especial · Oferta especial · Oferta especial · </span>
       </div></div>
       <div class="oferta-body">
-        <p class="oferta-kicker">⭐ ¡Vuelve nuestra oferta estrella! · Del 1 al 31 de octubre</p>
-        <div class="oferta-big">3<span>×</span>2</div>
-        <h2 class="oferta-title">Nunca ha sido tan fácil<br/><em>mantener tu bronceado</em></h2>
+        <p class="oferta-kicker">⭐ Oferta solarium · Bonos de 10 y 20 sesiones</p>
+        <div class="oferta-big">50<span>%</span></div>
+        <h2 class="oferta-title">Comprando 2 bonos,<br/><em>el 2º al 50%</em></h2>
         <div class="oferta-steps">
-          <div class="oferta-step"><strong>Compras 2</strong><span>bonos de 10 sesiones</span></div>
+          <div class="oferta-step"><strong>1er bono</strong><span>precio normal</span></div>
           <div class="oferta-plus" aria-hidden="true">+</div>
-          <div class="oferta-step oferta-step-gift"><strong>🎁 Te regalamos 1</strong><span>bono de 10 sesiones</span></div>
-          <div class="oferta-plus" aria-hidden="true">=</div>
-          <div class="oferta-step oferta-step-total"><strong>30 sesiones</strong><span>por solo 108 €</span></div>
+          <div class="oferta-step oferta-step-gift"><strong>🎁 2º bono al 50%</strong><span>paga solo la mitad</span></div>
         </div>
-        <p class="oferta-price"><s>162 €</s> <b>108 €</b> · la sesión te sale a <b>3,60 €</b></p>
-        <p class="oferta-note">⏳ Tienes 1 año para consumirlas · <span id="ofertaDias">¡No dejes pasar esta oportunidad!</span></p>
+        <p class="oferta-price">Ejemplo con bonos de 10 sesiones: <s>108 €</s> <b>81 €</b></p>
+        <p class="oferta-note">⏳ Oferta válida para bonos de 10 y 20 sesiones · <span>los bonos caducan al año</span></p>
         <a href="#contacto" class="btn-primary oferta-btn">☀ Ven a por tu oferta</a>
       </div>
     </div>
@@ -1653,17 +1651,5 @@
   };
   </script>
   <script src="https://t6227351-debug.github.io/bot-airmate-1-/airmate-widget.js" async></script>
-  <script>
-    // Oferta 3x2: visible del 1 al 31 de octubre de 2026; desaparece sola después.
-    (function(){
-      var el = document.getElementById('oferta'); if (!el) return;
-      var fin = new Date(2026, 10, 1, 0, 0, 0); // 1 de noviembre, 00:00
-      var hoy = new Date();
-      if (hoy >= fin) { el.remove(); var h = document.getElementById('heroOferta'); if (h) h.remove(); return; }
-      var dias = Math.ceil((fin - hoy) / 86400000);
-      var txt = document.getElementById('ofertaDias');
-      if (txt) txt.textContent = dias <= 1 ? '¡Último día!' : '¡Solo quedan ' + dias + ' días!';
-    })();
-  </script>
 </body>
 </html>
